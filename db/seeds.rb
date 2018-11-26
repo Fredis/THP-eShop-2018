@@ -10,6 +10,6 @@ require 'faker'
 
 i = 1
 20.times do |element|
-	items = Item.create(title: "Pic n° #{i}: " + Faker::Pokemon.name, description:Faker::MostInterestingManInTheWorld.quote, price:Faker::Number.decimal(2, 2), image_url:"cats-#{i}.jpeg")
+	items = Item.create(title: "Pic n°#{i}: " + Faker::Pokemon.name, description:Faker::MostInterestingManInTheWorld.quote, price:Faker::Number.decimal(2, 2), image_url:"cats-#{i}.jpeg")
 	i += 1
 end
