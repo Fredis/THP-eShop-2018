@@ -2,6 +2,9 @@
 <p>
 	<% @items.each do |element| %>
 		<%= element.title %>
+		<br/>
+			<%= image_tag "items/#{element.image_url}" %>
+		<br />
 		<br />
 	<% end %>
 </p>
