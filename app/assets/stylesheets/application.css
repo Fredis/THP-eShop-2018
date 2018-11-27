@@ -29,3 +29,8 @@
  *= require css/skins/light_blue
  *= require css/custom
  */
+
+.logo img
+{
+	height: 50px;
+}

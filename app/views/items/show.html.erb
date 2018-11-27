@@ -1,148 +1,64 @@
-<h1>Item show:</h1>
-<p>
-	<%= link_to "Back to Homepage", items_path %>
-	<br />
-	<br />
-		Title: <%= @item.title %>
-		<br/>
-		Description: <%= @item.description %>
-		<br/>
-		Price: <%= @item.price %> €
-		<br/>
-			<%= image_tag "items/#{@item.image_url}" %>
-		<br />
-		<br />
-</p>
+<div class="scrollToTop circle"><i class="fa fa-angle-up"></i></div>
 
-      <!-- main-container start -->
-      <!-- ================ -->
-      <section class="main-container">
+<!-- page wrapper start -->
+<!-- ================ -->
+	<div class="page-wrapper">
 
-        <div class="container">
-          <div class="row">
+		<%= render partial: "/layouts/header" %>
+    <!-- main-container start -->
+    <!-- ================ -->
+    <section class="main-container">
 
-            <!-- main start -->
+      <div class="container">
+        <div class="row">
+
+          <!-- main start -->
+          <!-- ================ -->
+          <div class="main col-12">
+
+            <!-- page-title start -->
             <!-- ================ -->
-            <div class="main col-12">
+            <h1 class="page-title text-center"><%= @item.title %></h1>
+            <div class="separator with-icon"><i class="fa fa-shopping-bag bordered"></i></div>
+            <!-- page-title end -->
 
-              <!-- page-title start -->
-              <!-- ================ -->
-              <h1 class="page-title text-center">Shop Product</h1>
-              <p class="large text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>Maxime beatae, a voluptatum facere.</p>
-              <div class="separator with-icon"><i class="fa fa-shopping-bag bordered"></i></div>
-              <!-- page-title end -->
-
-              <div class="row">
-                <div class="col-lg-4 col-xl-5">
-                  <!-- pills start -->
-                  <!-- ================ -->
-                  <!-- Nav tabs -->
-                  <ul class="nav nav-pills">
-                    <li class="nav-item"><a class="nav-link active" href="#pill-1" data-toggle="tab" title="images"><i class="fa fa-camera pr-1"></i> Photo</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#pill-2" data-toggle="tab" title="video"><i class="fa fa-video-camera pr-1"></i> Video</a></li>
-                  </ul>
-                  <!-- Tab panes -->
-                  <div class="tab-content clear-style">
-                    <div class="tab-pane active" id="pill-1">
-                      <div class="slick-carousel content-slider-with-thumbs mb-20">
-                        <div class="overlay-container overlay-visible">
-                          <img src="images/product-1.jpg" alt="">
-                          <a href="images/product-1.jpg" class="slick-carousel--popup-img overlay-link" title="image title"><i class="fa fa-plus"></i></a>
-                        </div>
-                        <div class="overlay-container overlay-visible">
-                          <img src="images/product-1-2.jpg" alt="">
-                          <a href="images/product-1-2.jpg" class="slick-carousel--popup-img overlay-link" title="image title"><i class="fa fa-plus"></i></a>
-                        </div>
-                        <div class="overlay-container overlay-visible">
-                          <img src="images/product-1-3.jpg" alt="">
-                          <a href="images/product-1-3.jpg" class="slick-carousel--popup-img overlay-link" title="image title"><i class="fa fa-plus"></i></a>
-                        </div>
-                        <div class="overlay-container overlay-visible">
-                          <img src="images/product-1-4.jpg" alt="">
-                          <a href="images/product-1-4.jpg" class="slick-carousel--popup-img overlay-link" title="image title"><i class="fa fa-plus"></i></a>
-                        </div>
-                      </div>
-                      <div class="content-slider-thumbs-container">
-                        <div class="slick-carousel content-slider-thumbs">
-                          <div class="slick-nav-thumb">
-                            <img src="images/product-1.jpg" alt="">
-                          </div>
-                          <div class="slick-nav-thumb">
-                            <img src="images/product-1-2.jpg" alt="">
-                          </div>
-                          <div class="slick-nav-thumb">
-                            <img src="images/product-1-3.jpg" alt="">
-                          </div>
-                          <div class="slick-nav-thumb">
-                            <img src="images/product-1-4.jpg" alt="">
-                          </div>
-                        </div>
-                      </div>
+            <div class="row">
+              <div class="col-lg-4 col-xl-5">
+                <!-- pills start -->
+                <!-- ================ -->
+                <!-- Nav tabs -->
+                <ul class="nav nav-pills">
+                  <li class="nav-item"><a class="nav-link active" href="#pill-1" data-toggle="tab" title="images"><i class="fa fa-camera pr-1"></i> Photo</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content clear-style">
+                  <div class="tab-pane active" id="pill-1">
+                    <div class="slick-carousel content-slider-with-thumbs mb-20">
+												<%= image_tag "items/#{@item.image_url}" %>
                     </div>
-                    <div class="tab-pane" id="pill-2">
-                      <div class="overlay-container">
-                        <img src="images/page-about-2.jpg" alt="">
-                        <a class="overlay-link" href="#"><i class="fa fa-link"></i></a>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- pills end -->
-                  <hr class="mb-10">
-                  <div class="clearfix mb-20">
-                    <span>
-                      <i class="fa fa-star text-default"></i>
-                      <i class="fa fa-star text-default"></i>
-                      <i class="fa fa-star text-default"></i>
-                      <i class="fa fa-star text-default"></i>
-                      <i class="fa fa-star"></i>
-                    </span>
-                    <a href="#" class="wishlist"><i class="fa fa-heart-o pl-10 pr-1"></i>Wishlist</a>
-                    <ul class="pl-20 pull-right social-links circle small clearfix margin-clear animated-effect-1">
-                      <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                      <li class="googleplus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                      <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    </ul>
-                  </div>
+                   </div>
                 </div>
-                <div class="col-lg-8 col-xl-7 pv-30">
-                  <h2 class="mt-4">Description</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem debitis enim facilis porro quia in voluptates praesentium, cupiditate, dolorum. Facilis minus, quidem! Id perspiciatis labore praesentium voluptatibus assumenda odio, magni.</p>
-                  <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non sint beatae delectus obcaecati eveniet nulla voluptate odio est laborum veniam? Natus nemo provident, voluptate molestias sint, nam dolor blanditiis minus!</p>
-                  
-                  <form class="clearfix row grid-space-10">
-                      <div class="form-group col-lg-4">
-                        <label>Quantity</label>
-                        <input type="text" class="form-control" value="1">
-                      </div>
-                      <div class="form-group col-lg-4">
-                        <label>Color</label>
-                        <select class="form-control">
-                          <option>Red</option>
-                          <option>White</option>
-                          <option>Black</option>
-                          <option>Blue</option>
-                          <option>Orange</option>
-                        </select>
-                      </div>
-                      <div class="form-group col-lg-4">
-                        <label>Size</label>
-                        <select class="form-control">
-                          <option>5.3"</option>
-                          <option>5.7"</option>
-                        </select>
-                      </div>
-                  </form>
-                  <span class="product price"><i class="fa fa-tag pr-10"></i><s class="small text-muted">$149.00</s> $99.00</span>
-                  <div class="product elements-list pull-right clearfix">
-                    <input type="submit" value="Add to Cart" class="margin-clear btn btn-default">
-                  </div>
+                <!-- pills end -->
+                <hr class="mb-10">
+              </div>
+              <div class="col-lg-8 col-xl-7 pv-30">
+                <h2 class="mt-4">Description</h2>
+                <p><%= @item.description %></p>
+                
+                <span class="product price"><i class="fa fa-tag pr-10"></i><s class="small text-muted">$120.00</s> $<%= @item.price %></span>
+                <div class="product elements-list pull-right clearfix">
+                  <input type="submit" value="Add to Cart" class="margin-clear btn btn-default">
                 </div>
               </div>
             </div>
-            <!-- main end -->
-
           </div>
+          <!-- main end -->
+
         </div>
-      </section>
-      <!-- main-container end -->
+      </div>
+    </section>
+    <!-- main-container end -->
+  	<%= render partial: "/layouts/footer" %>
+
+  </div>
+</div>
