@@ -12,4 +12,20 @@
  *
  *= require_tree .
  *= require_self
+
+ *= require bootstrap/css/bootstrap
+
+ *= require plugins/magnific-popup/magnific-popup
+ *= require plugins/rs-plugin-5/css/settings
+ *= require plugins/rs-plugin-5/css/layers
+ *= require plugins/rs-plugin-5/css/navigation
+ *= require css/animations
+
+ *= require plugins/slick/slick
+
+ *= require font-awesome
+ *= require css/style
+ *= require css/typography-default
+ *= require css/skins/light_blue
+ *= require css/custom
  */
