@@ -10,7 +10,9 @@
 
               <!-- logo -->
               <div id="logo" class="logo">
-                <a href="/"><img id="logo_img" src="../../assets/images/logo_light_blue.png" alt="The Project"></a>
+                <%= link_to root_path do %>
+                  <img id="logo_img" src="../../assets/images/logo_light_blue.png" alt="The Project">
+                <% end %>
               </div>
 
             </div>
@@ -37,10 +39,6 @@
                     <a href="index.html"><img id="logo-img-mobile" src="../../assets/images/logo_light_blue.png" alt="The Project"></a>
                   </div>
 
-                  <!-- name-and-slogan -->
-                  <div class="site-slogan">
-                    Multipurpose HTML5 Template
-                  </div>
 
                 </div>
 
@@ -112,7 +110,9 @@
                   <ul class="navbar-nav ml-xl-auto">
 
                     <li class="nav-item ">
-                      <a href="portfolio-grid-2-3-col.html" class="nav-link" aria-haspopup="true" aria-expanded="false">Home</a>
+                      <%= link_to root_path do %>
+                        <span class="nav-link" aria-haspopup="true" aria-expanded="false">Home</span>
+                      <% end %>
                     </li>
 
                     <li class="nav-item ">

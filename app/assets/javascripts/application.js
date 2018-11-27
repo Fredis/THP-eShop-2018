@@ -14,18 +14,28 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
-
 //= require plugins/jquery.min
-//= require bootstrap/js/bootstrap.bundle.min
-
+//= requirebootstrap/js/bootstrap.bundle.min
+//
 //= require plugins/rs-plugin-5/js/jquery.themepunch.tools.min
 //= require plugins/rs-plugin-5/js/jquery.themepunch.revolution.min
-
+//
+//= require plugins/rs-plugin-5/js/extensions/revolution.extension.slideanims.min
+//= require plugins/rs-plugin-5/js/extensions/revolution.extension.layeranimation.min
+//= require plugins/rs-plugin-5/js/extensions/revolution.extension.navigation.min
+//
+//= require plugins/isotope/imagesloaded.pkgd.min
+//= require plugins/isotope/isotope.pkgd.min
+//
 //= require plugins/magnific-popup/jquery.magnific-popup.min
-
+//
 //= require plugins/waypoints/jquery.waypoints.min
 //= require plugins/waypoints/sticky.min
-
+//
+//= require plugins/countTo/jquery.countTo
+//
+//= require plugins/slick/slick.min
+//
 //= require js/template
-
+//
 //= require js/custom
