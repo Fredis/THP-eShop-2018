@@ -11,7 +11,7 @@
 
 	      <!-- page-title start -->
 	      <!-- ================ -->
-	      <h1 class="page-title">Shopping Cart</h1>
+	      <h1 class="page-title">Order recap</h1>
 	      <div class="separator-2"></div>
 	      <!-- page-title end -->
 
@@ -21,8 +21,9 @@
 	            <th>Product</th>
 	            <th>Price</th>
 	            <th>Quantity</th>
-	            <th>Remove</th>
+	            <th></th>
 	            <th class="amount">Total </th>
+
 	          </tr>
 	        </thead>
 	        <% @items.each do |item| %>
@@ -32,11 +33,11 @@
 	            <td class="price"><%= item.price%>€</td>
 	            <td class="quantity">
 	              <div class="form-group">
-	                <input type="text" class="form-control" value="1">
+	                <p>1</p>
 	              </div>
 	            </td>
-	            <td class="remove"><a href="#" class="btn btn-remove btn-sm btn-default">Remove</a></td>
-	            <td class="amount"><%= item.price%>€</td>
+	            <td></td>
+	            <td class="amount"><%=item.price%>€</td>
 	          </tr>
 	          <% end %>
 	          <tr>
@@ -48,7 +49,7 @@
 	        </tbody>
 	      </table>
 	      <div class="text-right">
-	      	<%= link_to "Checkout", orders_path, class: "btn btn-group btn-default" %>
+	        <a href="" class="btn btn-group btn-default">Checkout</a>
 	      </div>
 
 	    </div>

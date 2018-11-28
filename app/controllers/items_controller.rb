@@ -1,6 +1,8 @@
 class ItemsController < ApplicationController
   def index
   	@items = Item.all
+    redirect_to root_path
+
   end
 
   def show
@@ -9,8 +11,6 @@ class ItemsController < ApplicationController
 
   def add_to_cart
   	cart = Cart.find(session[:cart_id])
-		puts "yoooooooooo"
-  	puts params[:id]
   	cart.items << Item.find(params[:id])
   end
 
