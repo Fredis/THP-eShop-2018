@@ -1,14 +1,1 @@
-<h1>Items list:</h1>
-<p>
-	<% @items.each do |element| %>
-		Title: <%= link_to "#{element.title}", item_path(element) %>
-		<br/>
-		Description: <%= element.description %>
-		<br/>
-		Price: <%= element.price %> €
-		<br/>
-			<%= image_tag "items/#{element.image_url}" %>
-		<br />
-		<br />
-	<% end %>
-</p>
+

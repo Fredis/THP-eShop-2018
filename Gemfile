@@ -4,6 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.5.1'
 
 gem 'faker'
+gem "font-awesome-rails"
 
 gem 'mailjet', :git => 'https://github.com/mailjet/mailjet-gem.git'
 
