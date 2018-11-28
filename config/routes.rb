@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :items, only: [:show, :index]
-  resources :uploads, only: [:new, :create]
+  resources :items
   devise_for :views
   devise_for :users
   get 'home/index'
