@@ -18,10 +18,12 @@ RSpec.describe Item, type: :model do
 			expect(subject).to_not be_valid
 		end
 
-		it "Is not valid without a description" do
-			subject.description = nil
-			expect(subject).to_not be_valid
-		end  
+		#it "Is not valid without a description" do
+			#subject.description = nil
+			#expect(subject).to_not be_valid
+		it { should validate_presence_of(:description) }
+
+		#end  
 
 		it "Is not valid without a price" do
 			subject.price = nil
