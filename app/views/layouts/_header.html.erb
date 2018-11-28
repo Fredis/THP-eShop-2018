@@ -32,7 +32,7 @@
 
                   <!-- logo -->
                   <div id="logo-mobile" class="logo">
-                    <a href="/"><img id="logo-img-mobile" src="../../assets/images/logo_light_blue.png" alt="The Project"></a>
+                    <a href="index.html"><img id="logo-img-mobile" src="../../assets/images/logo_light_blue.png" alt="The Project"></a>
                   </div>
 
 
@@ -53,17 +53,21 @@
                       </li>
                     </ul>
                   </div>
-                <div class="btn-group">
-                <% if user_signed_in? %>
-                  <%= link_to cart_path(session[:cart_id]), class: "btn dropdown-toggle dropdown-toggle--no-caret", id: "header-drop-2" do %>
-                    <i class="fa fa-shopping-basket"></i><span class="cart-count default-bg">8</span>
-                  <% end %>
-                <% else %>
-                  <%= link_to new_user_session_path, class: "btn dropdown-toggle dropdown-toggle--no-caret", id: "header-drop-2" do %>
-                    <i class="fa fa-shopping-basket"></i><span class="cart-count default-bg">8</span>
-                  <% end %>
-                <% end %>
-              </div>
+                  <div class="btn-group">
+                    <% if user_signed_in? %>
+                      <%= link_to cart_path(session[:cart_id]), class: "btn dropdown-toggle dropdown-toggle--no-caret", id: "header-drop-2" do %>
+                        <i class="fa fa-shopping-basket"></i><span class="cart-count default-bg">8</span>
+                      <% end %>
+                    <% else %>
+                      <%= link_to new_user_session_path, class: "btn dropdown-toggle dropdown-toggle--no-caret", id: "header-drop-2" do %>
+                        <i class="fa fa-shopping-basket"></i><span class="cart-count default-bg">8</span>
+                      <% end %>
+                    <% end %>
+                  </div>
+                </div>
+
+
+
                 <!-- header dropdown buttons end -->
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-1" aria-controls="navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
