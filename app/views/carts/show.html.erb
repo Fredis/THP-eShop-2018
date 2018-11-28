@@ -29,19 +29,19 @@
 	        <tbody>
 	          <tr class="remove-data">
 	            <td class="product"><a href="shop-product.html"><%= item.title %></a> <small><%= item.description%></small></td>
-	            <td class="price"><%= item.price%>€</td>
+	            <td class="price">$<%= item.price%></td>
 	            <td class="quantity">
 	              <div class="form-group">
 	                <input type="text" class="form-control" value="1">
 	              </div>
 	            </td>
 	            <td class="remove"><a href="#" class="btn btn-remove btn-sm btn-default">Remove</a></td>
-	            <td class="amount"><%= item.price%>€</td>
+	            <td class="amount">$<%= item.price%></td>
 	          </tr>
 	          <% end %>
 	          <tr>
 	           	<td class="total-quantity" colspan="4">Total price :</td>
-	           	<td class="total-amount"><%=@items.sum(:price)%>€</td>
+	           	<td class="total-amount">$<%=@items.sum(:price)%></td>
 	          </tr>
 
 	         

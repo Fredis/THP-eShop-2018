@@ -30,26 +30,27 @@
 	        <tbody>
 	          <tr class="remove-data">
 	            <td class="product"><a href="shop-product.html"><%= item.title %></a> <small><%= item.description%></small></td>
-	            <td class="price"><%= item.price%>€</td>
+	            <td class="price">$<%= item.price%></td>
 	            <td class="quantity">
 	              <div class="form-group">
 	                <p>1</p>
 	              </div>
 	            </td>
 	            <td></td>
-	            <td class="amount"><%=item.price%>€</td>
+	            <td class="amount">$<%=item.price%></td>
 	          </tr>
 	          <% end %>
 	          <tr>
 	           	<td class="total-quantity" colspan="4">Total price :</td>
-	           	<td class="total-amount"><%=@items.sum(:price)%>€</td>
+	           	<td class="total-amount">$<%=@items.sum(:price)%></td>
 	          </tr>
 
 	         
 	        </tbody>
 	      </table>
 	      <div class="text-right">
-	        <a href="" class="btn btn-group btn-default">Checkout</a>
+	        <%= link_to "Checkout", orders_path, method: :post, class: "btn btn-group btn-default" %>
+
 	      </div>
 
 	    </div>
