@@ -46,8 +46,16 @@
                 				<p class="small card-description"><%= element.description %></p>
                 				<div class="elements-list clearfix">
                 					<span class="price"><del>$120.00</del> $<%= element.price %></span>
-                					<a href="#" class="pull-right margin-clear btn btn-sm btn-default-transparent btn-animated">Add To Cart<i class="fa fa-shopping-cart"></i></a>
-                				</div>
+                          <% if user_signed_in? %>
+
+                              <%= link_to new_cart_path, class:"pull-right margin-clear btn btn-sm btn-default-transparent btn-animated", id: "45" do %>
+                                Add To Cart<i class="fa fa-shopping-cart"></i>
+                              <% end %>
+  
+                          <% else %>
+                					   <a href="/users/sign_in" class="pull-right margin-clear btn btn-sm btn-default-transparent btn-animated">Add To Cart<i class="fa fa-shopping-cart"></i></a>
+                          <% end %>
+                        </div>
                 			</div>
                 		</div>
                 	</div>
