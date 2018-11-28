@@ -56,11 +56,23 @@
                   <div class="btn-group">
                     <% if user_signed_in? %>
                       <%= link_to cart_path(session[:cart_id]), class: "btn dropdown-toggle dropdown-toggle--no-caret", id: "header-drop-2" do %>
-                        <i class="fa fa-shopping-basket"></i><span class="cart-count default-bg">8</span>
+                        <i class="fa fa-shopping-basket"></i><span class="cart-count default-bg">
+                          <% if user_signed_in? %>
+                            <%= Cart.find(session[:cart_id]).items.count %>
+                          <% else %>
+                            0
+                          <% end %>
+                        </span>
                       <% end %>
                     <% else %>
                       <%= link_to new_user_session_path, class: "btn dropdown-toggle dropdown-toggle--no-caret", id: "header-drop-2" do %>
-                        <i class="fa fa-shopping-basket"></i><span class="cart-count default-bg">8</span>
+                        <i class="fa fa-shopping-basket"></i><span class="cart-count default-bg">
+                          <% if user_signed_in? %>
+                            <%= Cart.find(session[:cart_id]).items.count %>
+                          <% else %>
+                          0
+                          <% end %>
+                        </span>
                       <% end %>
                     <% end %>
                   </div>
@@ -79,11 +91,7 @@
                   <ul class="navbar-nav ml-xl-auto">
 
                     <li class="nav-item ">
-                      <a href="portfolio-grid-2-3-col.html" class="nav-link" aria-haspopup="true" aria-expanded="false">Home</a>
-                    </li>
-
-                    <li class="nav-item ">
-                      <a href="portfolio-grid-2-3-col.html" class="nav-link" aria-haspopup="true" aria-expanded="false">Contact</a>
+                      <a href="/" class="nav-link" aria-haspopup="true" aria-expanded="false">Home</a>
                     </li>
 
                     <% if user_signed_in? %>
@@ -133,11 +141,25 @@
               <div class="btn-group">
                 <% if user_signed_in? %>
                   <%= link_to cart_path(session[:cart_id]), class: "btn dropdown-toggle dropdown-toggle--no-caret", id: "header-drop-2" do %>
-                    <i class="fa fa-shopping-basket"></i><span class="cart-count default-bg">8</span>
+                    <i class="fa fa-shopping-basket"></i>
+                    <span class="cart-count default-bg">
+                      <% if user_signed_in? %>
+                        <%= Cart.find(session[:cart_id]).items.count %>
+                      <% else %>
+                      0
+                      <% end %>
+                    </span>
                   <% end %>
                 <% else %>
                   <%= link_to new_user_session_path, class: "btn dropdown-toggle dropdown-toggle--no-caret", id: "header-drop-2" do %>
-                    <i class="fa fa-shopping-basket"></i><span class="cart-count default-bg">8</span>
+                    <i class="fa fa-shopping-basket"></i>
+                    <span class="cart-count default-bg">
+                      <% if user_signed_in? %>
+                        <%= Cart.find(session[:cart_id]).items.count %>
+                      <% else %>
+                      0
+                      <% end %>  
+                    </span>
                   <% end %>
                 <% end %>
               </div>
