@@ -1,20 +1,15 @@
 class CartsController < ApplicationController
   
   def show
-
-
+  	@cart = Cart.find(session[:cart_id])
+  	@items = @cart.items
   end
 
   def destroy
   end
 
   def new
-  	puts "//////"
-  	if cart_check_existence(current_user.id) == true
-  		puts "truuuuuueeeeeeeee"
-  	else
-  		@cart = Carte.create(user_id: current_user.id)
-  	end
+
   end
 
   def create

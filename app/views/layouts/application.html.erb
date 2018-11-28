@@ -19,8 +19,9 @@
     <% if user_signed_in? %>
       <%= check_cart = Cart.find_by(user_id: current_user.id).id %>
           <% if check_cart != nil %>
-            Y'a un cart
-            <%= session[:cart_id] %>
+            Y'a un cart<br />
+          Cart ID: <%= Cart.find_by(user_id: current_user.id).id %><br />
+          Cart Session ID: <%= session[:cart_id] %>
           <% else %>
           Y'a pas de cart
           <% end %>
