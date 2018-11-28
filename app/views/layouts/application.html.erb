@@ -15,6 +15,12 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="scrollToTop circle"><i class="fa fa-angle-up"></i></div>
+      <div class="page-wrapper">
+        <%= render partial: "/layouts/header" %>
+          <%= yield %>
+        <%= render partial: "/layouts/footer" %>
+      </div>
+    </div>
   </body>
 </html>
