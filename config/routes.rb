@@ -8,6 +8,6 @@ resources :orders
 
 devise_for :views
 devise_for :users
-root 'home#index', :controller => "items", :action => "index"
+root 'home#index' #, :controller => "items", :action => "index"
 
 end
