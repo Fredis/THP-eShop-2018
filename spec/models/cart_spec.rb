@@ -1,5 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe Cart, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+	subject {
+		described_class.new(user.id: 2, )
 end
+
+
+require 'rails_helper'
+require 'spec_helper'
+
