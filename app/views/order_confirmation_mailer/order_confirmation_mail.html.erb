@@ -1,0 +1,28 @@
+<body>
+	
+	<p> Bonjour, <p>
+	<% if order.items.size == 1 %>
+		<p>Merci pour votre commande sur Pic'your Cat. Voici  la photo de votre commande</p>
+		<%= item.title %> <br />
+		<%= item.image_url %> <br />
+		<p> A très bientôt </p>
+		<p> Miaou ! 😽 </p>
+
+
+	<% else %>
+		<p>Merci pour votre commande sur Pic'your Cat. Voici les photos de votre commande</p>
+		<% order.each do |o| %>
+			<%= item.title %> <br />
+			<%= item.image_url %> <br />
+		<% end %>
+		<p> A très bientôt </p>
+		<p> Miaou ! 😽 </p>
+
+	<%end%>
+
+
+
+</body>
+
+
+
