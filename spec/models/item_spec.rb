@@ -31,6 +31,12 @@ RSpec.describe Item, type: :model do
 		it "Is not valid with a price under $1 " do
 			expect(subject.price).to_not eql(0)
 		end 
+
+		it "Is not valid without a image_url" do
+			subject.image_url = nil
+			expect(subject).to_not be_valid
+		end
+
 	end
 end
 
