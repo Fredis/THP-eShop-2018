@@ -48,9 +48,9 @@
                 					<span class="price"><del>$120.00</del> $<%= element.price %></span>
                           <% if user_signed_in? %>
 
-                              <%= link_to new_cart_path, class:"pull-right margin-clear btn btn-sm btn-default-transparent btn-animated", id: "45" do %>
+                              <a href="/add-item-to-cart/<%= element.id %>" class="pull-right margin-clear btn btn-sm btn-default-transparent btn-animated" data-remote="true">
                                 Add To Cart<i class="fa fa-shopping-cart"></i>
-                              <% end %>
+                              </a>>
   
                           <% else %>
                 					   <a href="/users/sign_in" class="pull-right margin-clear btn btn-sm btn-default-transparent btn-animated">Add To Cart<i class="fa fa-shopping-cart"></i></a>
