@@ -3,7 +3,7 @@
 E-Shop for Thp project Session 6 2018
 [URL  ](https://www.URL_en_attente.com)
 
-![Logo](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![Logo](![alt text](http://image.noelshack.com/fichiers/2018/48/4/1543502890-pick-your-cat-logo.png "Logo ") "Logo ")
 ## Team 
 
 @FredS @Florian Pinto @iCedric @Axel @MarcelALng
