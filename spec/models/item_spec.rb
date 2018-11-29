@@ -32,7 +32,7 @@ RSpec.describe Item, type: :model do
 	end
 
 	context "Associations" do
-		
+	
 		it { should have_and_belong_to_many(:carts) }
 
 		it { should have_and_belong_to_many(:orders) }
