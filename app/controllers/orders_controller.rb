@@ -5,7 +5,8 @@ class OrdersController < ApplicationController
 		@items = @cart.items
 	end
 
-
+	def new
+	end
 
 	def create
 		@items = Cart.find(session[:cart_id]).items
@@ -31,7 +32,6 @@ class OrdersController < ApplicationController
 			:description => 'Kitten\'s payment',
 			:currency    => 'usd'
 		)
-			redirect_to root_path
 
 	rescue Stripe::CardError => e
 		flash[:error] = e.message
