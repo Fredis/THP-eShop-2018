@@ -49,16 +49,15 @@
 	        </tbody>
 	      </table>
 
-			<%= form_tag charges_path do %>
+	      <div class="text-right">
+
+	      	<%= form_tag order_validation_path do %>
 			  <article>
 			    <% if flash[:error].present? %>
 			      <div id="error_explanation">
 			        <p><%= flash[:error] %></p>
 			      </div>
 			    <% end %>
-			    <label class="amount">
-			      <span>Amount: $<%=@items.sum(:price)%></span>
-			    </label>
 			  </article>
 
 			  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
@@ -66,10 +65,7 @@
 			          data-description="Pic'Your Cat - Order Payment"
 			          data-amount=<%=@items.sum(:price)*100%>
 			          data-locale="auto"></script>
-			<% end %>	
-
-	      <div class="text-right">
-	        <%= link_to "Checkout", orders_path, method: :post, class: "btn btn-group btn-default" %>
+			<% end %>
 
 	      </div>
 

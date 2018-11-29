@@ -1,15 +1,7 @@
 class ChargesController < ApplicationController
 	
 	def new
-		  @order = Order.create(user_id: current_user.id, status: "Payment done.")
-		  puts "yooooooooo"
-		  puts @order.errors.messages
-		  @items.each do |element|
-			@order.items << element
-		  end
-		 @items.destroy
-		 Cart.find(session[:cart_id]).destroy
-		 session.delete(:cart_id)
+
 	end
 
 	def create
@@ -34,9 +26,7 @@ class ChargesController < ApplicationController
 		rescue Stripe::CardError => e
 		flash[:error] = e.message
 
-
-
-		redirect_to new_charge_path
+		redirect_to order_validation_path
 
 
 	end
