@@ -7,7 +7,7 @@ gem 'stripe'
 
 gem 'faker'
 gem "font-awesome-rails"
-
+gem "aws-sdk-s3", require: false
 gem 'mailjet', :git => 'https://github.com/mailjet/mailjet-gem.git'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

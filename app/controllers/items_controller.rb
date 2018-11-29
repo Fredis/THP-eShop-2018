@@ -24,8 +24,7 @@ class ItemsController < ApplicationController
   end
 
   def update
-    @item = Item.find(params[:id])
-    @item.image_url.attach(params[:item][:image_url])
+    @item = Item.find(params[:item][:image_url])
     redirect_to @item
   end
 
