@@ -8,12 +8,11 @@ E-Shop for Thp project Session 6 2018
 
 ## Team  Members
 
-@FredS <br>
-@Florian Pinto<br>
-@iCedric <br>
-@Axel <br>
-@MarcelALng<br>
-
+|**@FredS**| Bdd |
+|**@Florian Pinto**	|--Bdd|
+| **@iCedric**			| Rspec/ Mailer |
+| **@Axel**				| Stripe/Checkout/Order |
+| **@MarcelALng**	| Mailer/Readme:p |
 
 ### Prerequisites
 
@@ -39,9 +38,6 @@ $	Localhost (http://localhost:3000)
 
 Give examples
 ```
-
-
-
 A step by step series of examples that tell you how to get a development env running
 
 Say what the step will be
