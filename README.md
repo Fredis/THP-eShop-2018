@@ -17,7 +17,7 @@ E-Shop for Thp project Session 6 2018
 
 ### Prerequisites
 
-Need:
+Need: <br>
 -Ruby 	> 2.5.1 <br>
 -Rails 	> 5.2.0	<br>
 -MacOs	> 10.0	<br>
@@ -35,7 +35,7 @@ $	Rails db:create<br>
 $	Rails db:migrate<br>
 $	Rails db:seed<br>
 $	Rails server <br>
-$	link_to [http://localhost:3000] (http://localhost:3000)
+$	Localhost (http://localhost:3000)
 
 Give examples
 ```
