@@ -36,9 +36,17 @@ $	Rails db:seed<br>
 $	Rails server <br>
 $	Localhost (http://localhost:3000)
 
-Give examples
+User Story
 ```
+-	Visitor( not logged):
+	- 
 
+- User logged can:
+	- 
+
+- Admin can:
+	- 
+ 
 
 ```
 Give the example
