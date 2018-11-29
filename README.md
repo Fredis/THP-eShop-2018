@@ -12,10 +12,10 @@ E-Shop for Thp project Session 6 2018
 
 Need:
 -Ruby 	> 2.5.1 <br>
--Rails 	> 5.2.0
--MacOs	> 10.0
--Linux	> 14.0
--Windows> Good Luck:)
+-Rails 	> 5.2.0	<br>
+-MacOs	> 10.0	<br>
+-Linux	> 14.0	<br>
+-Windows> Good Luck:)<br>
 
 
 
