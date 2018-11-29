@@ -47,9 +47,11 @@
 	         
 	        </tbody>
 	      </table>
-	      <div class="text-right">
-	      	<%= link_to "Checkout", orders_path, class: "btn btn-group btn-default" %>
-	      </div>
+	      <% if @items.sum(:price) != 0 %>
+	      	<div class="text-right">
+	      		<%= link_to "Checkout", orders_path, class: "btn btn-group btn-default" %>
+	      	</div>
+	      <% end %>
 
 	    </div>
 	    <!-- main end -->
