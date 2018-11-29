@@ -1,0 +1,4 @@
+$(document).ready(function() {
+	$('.remove-data-<%=params[:id]%>').remove();
+	$('.total-amount').html('$<%=@items.sum(:price)%>');
+});
