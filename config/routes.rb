@@ -11,6 +11,6 @@ resources :charges
 
 devise_for :views
 devise_for :users
-root 'home#index' #, :controller => "items", :action => "index"
+root to: 'home#index'
 
 end
