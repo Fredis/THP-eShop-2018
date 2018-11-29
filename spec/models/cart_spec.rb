@@ -12,7 +12,7 @@ RSpec.describe Cart, type: :model do
 
 		it do
 			should have_db_column(:user_id).of_type(:integer)
-		end 
+		end
 
 		it { should have_db_index(:user_id) }
 
