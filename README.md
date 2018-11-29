@@ -6,7 +6,12 @@ E-Shop for Thp project Session 6 2018
 ![alt text](http://image.noelshack.com/fichiers/2018/48/4/1543502890-pick-your-cat-logo.png "Logo ") 
 ## Team  Members
 
-@FredS @Florian Pinto @iCedric @Axel @MarcelALng
+@FredS <br>
+@Florian Pinto<br>
+@iCedric <br>
+@Axel <br>
+@MarcelALng<br>
+
 
 ### Prerequisites
 
