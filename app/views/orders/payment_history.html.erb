@@ -1,0 +1,48 @@
+<%= render partial: "/layouts/menu_edition" %>
+
+<section class="main-container">
+
+	<div class="container">
+	  <div class="row">
+
+	    <div class="main col-12">
+
+	      <h1 class="page-title">Payment History</h1>
+	      <div class="separator-2"></div>
+
+	      <table class="table cart table-hover table-colored">
+	        <thead>
+	          <tr>
+	            <th>Order ID</th>
+	            <th>Order Date</th>
+	            <th></th>
+	            <th class="amount">Total </th>
+
+	          </tr>
+	        </thead>
+					<% @orders.each do |order| %>
+	        <tbody>
+
+	          <tr>
+	          
+	            <td class="product"><a href="shop-product.html"><%= order.id %></a></td>
+	          
+	            <td class="price"><%= order.created_at %></td>
+
+	            <td></td>
+	            
+	            <td class="amount"><b>$<%= order.items.sum(:price) %></b></td>
+	          
+	          </tr>
+
+	          <% end %>
+	         
+	        </tbody>
+	      </table>
+
+	    </div>
+	    <!-- main end -->
+
+	  </div>
+	</div>
+</section>
