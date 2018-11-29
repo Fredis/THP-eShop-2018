@@ -1,9 +1,11 @@
+![alt text](http://image.noelshack.com/fichiers/2018/48/4/1543502890-pick-your-cat-logo.png "Logo ") 
+
 # THP E-Shop 2018
 
 E-Shop for Thp project Session 6 2018
 [URL](https://www.URL_en_attente.com)
 
-![alt text](http://image.noelshack.com/fichiers/2018/48/4/1543502890-pick-your-cat-logo.png "Logo ") 
+
 ## Team  Members
 
 @FredS <br>
@@ -25,14 +27,15 @@ Need:
 
 
 ### Installing
-$	Git init
-$	Git clone https://github.com/Fredis/THP-eShop-2018
-$	Bundle install
-$	Rails db:create
-$	Rails db:migrate
-$	Rails db:seed
-$	Rails server
-$	link_to 
+
+$	Git init <br>
+$	Git clone https://github.com/Fredis/THP-eShop-2018 <br>
+$	Bundle install <br>
+$	Rails db:create<br>
+$	Rails db:migrate<br>
+$	Rails db:seed<br>
+$	Rails server <br>
+$	link_to [http://localhost:3000] (http://localhost:3000)
 
 Give examples
 ```
