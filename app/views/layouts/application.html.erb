@@ -15,7 +15,7 @@
   </head>
 
   <body>
-  
+
     <% if user_signed_in? %>
       <%= check_cart = Cart.find_by(user_id: current_user.id).id %>
           <% if check_cart != nil %>

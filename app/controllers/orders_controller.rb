@@ -15,11 +15,25 @@ class OrdersController < ApplicationController
 	  @items.each do |element|
 		@order.items << element
 	  end
-	 @items.destroy
-	 Cart.find(session[:cart_id]).destroy
-	 session.delete(:cart_id)
-	 
+		@items.destroy
+ 	 Cart.find(session[:cart_id]).destroy
+ 	 session.delete(:cart_id)
 
+	 @amount = @items.sum(:price)
+
+	 customer = Stripe::Customer.create(
+		 :email => params[:stripeEmail],
+		 :source  => params[:stripeToken]
+	 )
+	 charge = Stripe::Charge.create(
+		 :customer    => customer.id,
+		 :amount      => @amount,
+		 :description => 'Kitten\'s payment',
+		 :currency    => 'us'
+	 )
+ rescue Stripe::CardError => e
+	 flash[:error] = e.message
+	 redirect_to root_path
 	end
 
 end
