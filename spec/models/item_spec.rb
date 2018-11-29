@@ -7,7 +7,7 @@ RSpec.describe Item, type: :model do
 		price: 12, image_url: "imageid.com" )
 	}
 
-	context "When a new item is created by admin" do
+	context "When a new item is created" do
 
 		it "Is valid with valid attributes" do
 			expect(subject).to be_valid
