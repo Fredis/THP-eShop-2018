@@ -8,11 +8,11 @@ E-Shop for Thp project Session 6 2018
 
 ## Team  Members
 
-|**@FredS**| Bdd |
-|**@Florian Pinto**	|--Bdd|
-| **@iCedric**			| Rspec/ Mailer |
-| **@Axel**				| Stripe/Checkout/Order |
-| **@MarcelALng**	| Mailer/Readme:p |
+|**@FredS**| Bdd | <br>
+|**@Florian Pinto**	|--Bdd| <br>
+| **@iCedric**			| Rspec/ Mailer |<br>
+| **@Axel**				| Stripe/Checkout/Order |<br>
+| **@MarcelALng**	| Mailer/Readme:p |<br>
 
 ### Prerequisites
 
