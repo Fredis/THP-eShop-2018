@@ -6,6 +6,7 @@ get "paymenthistory", to: "orders#payment_history"
 resources :items, only: [:show, :index]
 resources :carts, only: [:show, :new, :create, :destroy]
 resources :orders
+resources :charges
 
 devise_for :views
 devise_for :users
