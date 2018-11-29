@@ -13,10 +13,13 @@ class ItemsController < ApplicationController
 
   	@cart = Cart.find(session[:cart_id])
   	puts params[:id]
-  	@cart.items << Item.find(params[:id])
-
+    
+    if @cart.items.find(params[:id])''
+      @cart.items << Item.find(params[:id])
+    end
+    
     respond_to do |format|
-       format.html { redirect_to email_path(params[:id]) }
+       format.html { redirect_to items_path(params[:id]) }
        format.js
     end
   end
