@@ -8,7 +8,7 @@
 
               <!-- logo -->
               <div id="logo" class="logo">
-                <a href="/"><img id="logo_img" src="../../assets/images/logo_light_blue.png" alt="The Project"></a>
+                <a href="<%= root_path %>"><img id="logo_img" src="../../assets/images/logo_light_blue.png" alt="The Project"></a>
               </div>
 
             </div>
@@ -32,7 +32,7 @@
 
                   <!-- logo -->
                   <div id="logo-mobile" class="logo">
-                    <a href="index.html"><img id="logo-img-mobile" src="../../assets/images/logo_light_blue.png" alt="The Project"></a>
+                    <a href="<%= root_path %>"><img id="logo-img-mobile" src="../../assets/images/logo_light_blue.png" alt="The Project"></a>
                   </div>
 
 
@@ -91,7 +91,7 @@
                   <ul class="navbar-nav ml-xl-auto">
 
                     <li class="nav-item ">
-                      <a href="/" class="nav-link" aria-haspopup="true" aria-expanded="false">Home</a>
+                      <a href="<%= root_path %>" class="nav-link" aria-haspopup="true" aria-expanded="false">Home</a>
                     </li>
 
                     <% if user_signed_in? %>
