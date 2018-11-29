@@ -34,7 +34,7 @@ $	Rails db:create<br>
 $	Rails db:migrate<br>
 $	Rails db:seed<br>
 $	Rails server <br>
-$	Localhost (http://localhost:3000)
+$	Localhost (http://localhost:3000) <br>
 
 User Story
 ```
@@ -55,7 +55,6 @@ User Story
 	- Edit his profile
 	- check all his orders
 	- Can order and pay
-	-
  
 
 ```
