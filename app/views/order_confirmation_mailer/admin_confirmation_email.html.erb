@@ -1,25 +1,25 @@
 <body>
 	
 	<p> Yo, <p>
-	<p> Bonne nouvelle, l'utilisateur <#%=user.id %> a claqué ses bouzoufs pour acheter des photos de chats t'as vu </p>
+	<p> Bonne nouvelle, l'utilisateur <%=current_user.id %> a claqué ses bouzoufs pour acheter des photos de chats t'as vu </p>
 	<p> Voici le récapitulatif de sa commande <p>
-	<!--<#% if order.items.size == 1 %>
-		<#%= order.item.title %> <br />
-		<#%= order.item.image_url %> <br />
-		<p> Total de la commande <#%=order.item.price %> </p> -->
+	<p> Commande numéro <%=order.id%></p>
+	 <% if items_to_email.size == 1 %>
+		<%= items_to_email[0].title %> <br />
+		<p> Url de l'image <%=items_to_email[0].url_image%> </p>
+		<p> Total de la commande <%=items_to_email[0].price %> </p> 
 		<p> Miaou ! 😽 </p>
 
 
-	<!-- <% else %>
-		<p>Merci pour votre commande sur Pic'your Cat. Voici les photos de votre commande</p>
-		<#% order.item.each do |o| %>
-			<#%= o.itemm.title %> <br />
-			<#%= o.item.image_url %> <br />
-			<#%= o.item.price %> <br />
-		<#% end %>
-		<p><#%=order.items.sum(:price)=%></p>
+	<% else %>
+		<% items_to_email.each do |i| %>
+			<%= i[i.id].title %> <br />
+			<%= i[i.id].image_url %> <br />
+			<%= i[i.id].price %> <br />
+		<% end %>
+		<p>Total de la commande <%=items_to_email.sum(:price)%></p>
 		<p> Miaou ! 😽 </p>
-	<#%end%> -->
+	<%end%>
 
 
 

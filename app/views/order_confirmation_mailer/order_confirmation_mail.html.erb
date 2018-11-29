@@ -1,27 +1,28 @@
 <body>
 	
 	<p> Bonjour, <p>
-	<!-- <#% if order.items.size == 1 %> -->
-		<p>Merci pour votre commande sur Pic'your Cat. Voici  la photo de votre commande</p>
-		<!--<#%= item.title %> <br />
-		<#%= item.image_url %> <br />-->
+	<p>Merci pour votre commande sur Pic'your Cat. En voici le récapitulatif</p>
+	<p>Numéro de commande <%=order.id%></p>
+	<% if items_to_email.size == 1 %> 
+		<%= items_to_email[0].title %> <br />
+		<p>Voici votre image </p>
+		<%= image_tag 'cats-<%=items_to_email[0].id%>.jpeg'%>
+		<p> Vous pouvez également récupérer votre image via le lien <%= items_to_email[0].image_url %> <br />
+		<p> Voici le total de la commande <%=items_to_email[0].item.price %> </p>
 		<p> A très bientôt </p>
 		<p> Miaou ! 😽 </p>
 
-
-	<!-- <#% else %>
-		<p>Merci pour votre commande sur Pic'your Cat. Voici les photos de votre commande</p>
-		<#% order.each do |o| %>
-			<#%= item.title %> <br />
-			<#%= item.image_url %> <br />
-		<#% end %> 
+	<% else %>
+		<% items_to_email.each do |i| %>
+			<%= i[i.id].title %> <br />
+			<%= image_tage 'cats-<%=i[i.id].id%>.jpeg'%>
+			<p> Vous pouvez aussi récupérer l'image via l'url <%= i[i.id].image_url %> <p>
+		<% end %>
+		<p>Total de la commande <%=items_to_email.sum(:price)%></p>
 		<p> A très bientôt </p>
 		<p> Miaou ! 😽 </p>
 
-	<#%end%> -->
-
-
-
+	<%end%>
 </body>
 
 

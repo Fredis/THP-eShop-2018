@@ -26,6 +26,19 @@ class OrdersController < ApplicationController
 		@items.each do |element|
 			@order.items << element
 		end
+
+		#set variables to use mailers 
+		items_to_email = @order.items
+		order_id = @order.id
+
+
+		#send a confirmation email to customer
+		OrderConfirmationMailer.order_confirmation_email(order.id, current_user.id, items_to_email)
+
+		#send a confirmation email to admin 
+		OrderConfirmationMailer.admin_confirmation_email(order.id, current_user.id, items_to_email)
+
+
 		@items.destroy
 		Cart.find(session[:cart_id]).destroy
 		session.delete(:cart_id)
