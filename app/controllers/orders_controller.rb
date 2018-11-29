@@ -20,4 +20,9 @@ class OrdersController < ApplicationController
 	 session.delete(:cart_id)
 	end
 
+	def payment_history
+		puts "hahahahahaha"
+		@orders = User.find(current_user.id).orders
+	end
+
 end
