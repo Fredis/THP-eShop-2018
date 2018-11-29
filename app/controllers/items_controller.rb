@@ -14,7 +14,9 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @item = Item.create
+    @item = Item.create(title:"yappapapi", description:"yoyo", price: 10.23)
+    puts "/////////"
+    puts params[:image_url]
     @item.image_url.attach(params[:item][:image_url])
     redirect_to @item
   end
