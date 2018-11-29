@@ -38,9 +38,7 @@ $	Localhost (http://localhost:3000)
 
 Give examples
 ```
-A step by step series of examples that tell you how to get a development env running
 
-Say what the step will be
 
 ```
 Give the example
@@ -68,6 +66,10 @@ Give an example
 
 ### And coding style tests
 
+To add your api to test on localhost
+
+$ EDITOR="sublime --wait" bin/rails credentials:edit
+
 Explain what these tests test and why
 
 ```
@@ -94,9 +96,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **
 
 ## License
 
