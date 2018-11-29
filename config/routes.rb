@@ -4,7 +4,7 @@ get "add-item-to-cart/:id", to: "items#add_to_cart"
 get "paymenthistory", to: "orders#payment_history"
 post "order_validation", to: "orders#order_validation"
 
-resources :items, only: [:show, :index]
+resources :items
 resources :carts, only: [:show, :new, :create, :destroy]
 resources :orders
 resources :charges
