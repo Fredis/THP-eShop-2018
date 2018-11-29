@@ -41,19 +41,6 @@
                 <!-- header dropdown buttons -->
                 <div class="header-dropdown-buttons hidden-lg-up p-0 ml-auto mr-3">
                   <div class="btn-group">
-                    <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-search"></i></button>
-                    <ul class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-drop-3">
-                      <li>
-                        <form role="search" class="search-box margin-clear">
-                          <div class="form-group has-feedback">
-                            <input type="text" class="form-control" placeholder="Search">
-                            <i class="fa fa-search form-control-feedback"></i>
-                          </div>
-                        </form>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="btn-group">
                     <% if user_signed_in? %>
                       <%= link_to cart_path(session[:cart_id]), class: "btn dropdown-toggle dropdown-toggle--no-caret", id: "header-drop-2" do %>
                         <i class="fa fa-shopping-basket"></i><span class="cart-count default-bg">
@@ -101,17 +88,17 @@
                       </li>
 
                       <li class="nav-item ">
-                        <%= link_to "Déconnexion", destroy_user_session_path, method: :delete, class: "nav-link"%>
+                        <%= link_to "Disconnect", destroy_user_session_path, method: :delete, class: "nav-link"%>
                       </li>
 
                     <% else %>
 
                       <li class="nav-item ">
-                        <%= link_to "Connexion", new_user_session_path, class: "nav-link"%>
+                        <%= link_to "Sign in", new_user_session_path, class: "nav-link"%>
                       </li> 
 
                       <li class="nav-item ">
-                        <%= link_to "Inscription", new_user_registration_path, class: "nav-link"%>
+                        <%= link_to "Sign up", new_user_registration_path, class: "nav-link"%>
                       </li> 
 
                     <% end %>
@@ -129,19 +116,7 @@
           <div class="col-auto hidden-md-down">
             <!-- header dropdown buttons -->
             <div class="header-dropdown-buttons">
-              <div class="btn-group">
-                <button type="button" class="btn dropdown-toggle dropdown-toggle--no-caret" id="header-drop-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-search"></i></button>
-                <ul class="dropdown-menu dropdown-menu-right dropdown-animation" aria-labelledby="header-drop-1">
-                  <li>
-                    <form role="search" class="search-box margin-clear">
-                      <div class="form-group has-feedback">
-                        <input type="text" class="form-control" placeholder="Search">
-                        <i class="fa fa-search form-control-feedback"></i>
-                      </div>
-                    </form>
-                  </li>
-                </ul>
-              </div>
+
               <div class="btn-group">
                 <% if user_signed_in? %>
                   <%= link_to cart_path(session[:cart_id]), class: "btn dropdown-toggle dropdown-toggle--no-caret", id: "header-drop-2" do %>

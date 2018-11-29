@@ -27,8 +27,4 @@ class CartsController < ApplicationController
 
   end
 
-  def cart_check_existence(user_id)
-
-  end
-
 end
