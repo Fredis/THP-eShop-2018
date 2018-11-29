@@ -3,7 +3,7 @@
 # THP E-Shop 2018
 
 E-Shop for Thp project Session 6 2018
-[URL](https://www.URL_en_attente.com)
+[URL](https://www.copiez_coller_url.com)
 
 
 ## Team  Members
