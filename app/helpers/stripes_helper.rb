@@ -1,0 +1,2 @@
+module StripesHelper
+end
