@@ -18,6 +18,8 @@ class OrdersController < ApplicationController
 	 @items.destroy
 	 Cart.find(session[:cart_id]).destroy
 	 session.delete(:cart_id)
+	 
+
 	end
 
 end
