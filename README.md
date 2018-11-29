@@ -38,13 +38,23 @@ $	Localhost (http://localhost:3000)
 
 User Story
 ```
--	Visitor( not logged):
-	- 
+ 1. Visitor( not logged):
+	 -Can see all items
+	 -Can to item's page product
+	 -Can login and signup
+	 -Can't add item to basket
+	 -Can't other's basket
+	 -Can't checkout
+
+	
 
 - User logged can:
-	- 
-
-- Admin can:
+	- Can do all actions of Visitor
+	- Can checkout
+	- Can add item to basket
+	- Edit his profile
+	- check all his orders
+	- Can order and pay
 	- 
  
 
