@@ -1,17 +1,17 @@
 # THP E-Shop 2018
 
 E-Shop for Thp project Session 6 2018
-[URL  ](https://www.URL_en_attente.com)
+[URL](https://www.URL_en_attente.com)
 
-(![alt text](http://image.noelshack.com/fichiers/2018/48/4/1543502890-pick-your-cat-logo.png "Logo ") 
-## Team 
+![alt text](http://image.noelshack.com/fichiers/2018/48/4/1543502890-pick-your-cat-logo.png "Logo ") 
+## Team  Members
 
 @FredS @Florian Pinto @iCedric @Axel @MarcelALng
 
 ### Prerequisites
 
 Need:
--Ruby 	> 2.5.1
+-Ruby 	> 2.5.1 <br>
 -Rails 	> 5.2.0
 -MacOs	> 10.0
 -Linux	> 14.0
