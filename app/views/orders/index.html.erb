@@ -1,0 +1,62 @@
+<!-- main-container start -->
+<!-- ================ -->
+<section class="main-container">
+
+	<div class="container">
+	  <div class="row">
+
+	    <!-- main start -->
+	    <!-- ================ -->
+	    <div class="main col-12">
+
+	      <!-- page-title start -->
+	      <!-- ================ -->
+	      <h1 class="page-title">Order recap</h1>
+	      <div class="separator-2"></div>
+	      <!-- page-title end -->
+
+	      <table class="table cart table-hover table-colored">
+	        <thead>
+	          <tr>
+	            <th>Product</th>
+	            <th>Price</th>
+	            <th>Quantity</th>
+	            <th></th>
+	            <th class="amount">Total </th>
+
+	          </tr>
+	        </thead>
+	        <% @items.each do |item| %>
+	        <tbody>
+	          <tr class="remove-data">
+	            <td class="product"><a href="shop-product.html"><%= item.title %></a> <small><%= item.description%></small></td>
+	            <td class="price">$<%= item.price%></td>
+	            <td class="quantity">
+	              <div class="form-group">
+	                <p>1</p>
+	              </div>
+	            </td>
+	            <td></td>
+	            <td class="amount">$<%=item.price%></td>
+	          </tr>
+	          <% end %>
+	          <tr>
+	           	<td class="total-quantity" colspan="4">Total price :</td>
+	           	<td class="total-amount">$<%=@items.sum(:price)%></td>
+	          </tr>
+
+	         
+	        </tbody>
+	      </table>
+	      <div class="text-right">
+	        <%= link_to "Checkout", orders_path, method: :post, class: "btn btn-group btn-default" %>
+
+	      </div>
+
+	    </div>
+	    <!-- main end -->
+
+	  </div>
+	</div>
+</section>
+<!-- main-container end -->

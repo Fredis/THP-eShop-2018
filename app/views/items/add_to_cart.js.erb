@@ -1,0 +1,8 @@
+$(document).ready(function() {
+
+	let content = "<%= @cart.items.count %>";
+
+	$('.cart-count').html(content);
+	$('.cart-count').fadeIn(500).css('background-color' , '#018786')
+
+});

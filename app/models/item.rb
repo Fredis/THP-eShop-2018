@@ -4,4 +4,5 @@ class Item < ApplicationRecord
 	has_and_belongs_to_many :carts
 	has_one_attached :image_url
 
+	has_and_belongs_to_many :orders
 end

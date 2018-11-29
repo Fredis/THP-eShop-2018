@@ -12,4 +12,35 @@
  *
  *= require_tree .
  *= require_self
+
+ *= require bootstrap/css/bootstrap
+
+ *= require plugins/magnific-popup/magnific-popup
+ *= require plugins/rs-plugin-5/css/settings
+ *= require plugins/rs-plugin-5/css/layers
+ *= require plugins/rs-plugin-5/css/navigation
+ *= require css/animations
+
+ *= require plugins/slick/slick
+
+ *= require font-awesome
+ *= require css/style
+ *= require css/typography-default
+ *= require css/skins/light_blue
+ *= require css/custom
  */
+
+.logo img
+{
+	height: 50px;
+}
+
+.user-profile-menu
+{
+	width: 50%;
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: auto;
+	margin-right: auto;
+}

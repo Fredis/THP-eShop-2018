@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
 
-  resources :items
-  devise_for :views
-  devise_for :users
-  get 'home/index'
-  root 'home#index'
+get "add-item-to-cart/:id", to: "items#add_to_cart"
+get "paymenthistory", to: "orders#payment_history"
+
+resources :items, only: [:show, :index]
+resources :carts, only: [:show, :new, :create, :destroy]
+resources :orders
+
+devise_for :views
+devise_for :users
+root 'home#index' #, :controller => "items", :action => "index"
 
 end

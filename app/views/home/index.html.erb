@@ -1,24 +1,73 @@
-<ul>
-	<%if user_signed_in? %>
-		<li>
-			<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-		</li>
-		<li>
-			<%= current_user.email %>
-		</li>
-		<li>
-			<%= link_to "Edit account", edit_user_registration_path %>
-		</li>
-	<%else%>
-		<li>
-			<%= link_to "Sign In", new_user_session_path %>
-		</li>
-		<li>
-			<% link_to "Sign Up", new_user_registration_path %>
-		</li>
 
-	<%end%>
-</ul>
+    <!-- header end -->
+  <!-- header-container end -->
+  <!-- banner start -->
+    <!-- ================ -->
 
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+  <div id="page-start"></div>
+
+  <!-- section start -->
+  <!-- ================ -->
+
+  <section class="section light-gray-bg clearfix">
+    <div class="container">
+      <div class="row justify-content-lg-center">
+        <div class="col-lg-8">
+          <h2 class="text-center mt-4"><strong>Pic'Your Cat</strong></h2>
+          <div class="separator"></div>
+          <p class="lead text-center">The best place to find the best pictures of cats.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section light-gray-bg clearfix">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <!-- Tab panes -->
+          <div class="tab-content clear-style">
+            <div class="tab-pane active" id="pill-1">
+              <div class="row grid-space-10">
+
+                <% @items.each do |element| %>
+                	<div class="col-lg-3 col-md-6">
+                		<div class="listing-item white-bg bordered mb-20">
+                			<div class="overlay-container">
+                        <div class="card-features">
+                				      <%= image_tag "items/#{element.image_url}" %>
+                        </div>
+                        <%= link_to item_path(element), class: "overlay-link" do %>
+                          <i class="fa fa-search-plus"></i></a>
+                		    <% end %>
+                      </div>
+                			<div class="body">
+                				<h3><%= link_to "#{element.title}", item_path(element) %></h3>
+                				<p class="small card-description"><%= element.description %></p>
+                				<div class="elements-list clearfix">
+                					<span class="price"><del>$120.00</del> $<%= element.price %></span>
+                          <% if user_signed_in? %>
+
+                              <a href="/add-item-to-cart/<%= element.id %>" class="pull-right margin-clear btn btn-sm btn-default-transparent btn-animated" data-remote="true">
+                                Add To Cart<i class="fa fa-shopping-cart"></i>
+                              </a>>
+
+                          <% else %>
+                					   <a href="/users/sign_in" class="pull-right margin-clear btn btn-sm btn-default-transparent btn-animated">Add To Cart<i class="fa fa-shopping-cart"></i></a>
+                          <% end %>
+                        </div>
+                			</div>
+                		</div>
+                	</div>
+                <% end %>
+
+
+              </div>
+            </div>
+
+          </div>
+          <!-- pills end -->
+        </div>
+      </div>
+    </div>
+  </section>

@@ -1,15 +1,61 @@
-<h1>Item show:</h1>
-<p>
-	<%= link_to "Back to Homepage", items_path %>
-	<br />
-	<br />
-		Title: <%= @item.title %>
-		<br/>
-		Description: <%= @item.description %>
-		<br/>
-		Price: <%= @item.price %> €
-		<br/>
-			<%= image_tag "items/#{@item.image_url}" %>
-		<br />
-		<br />
-</p>
+    <section class="main-container">
+
+      <div class="container">
+        <div class="row">
+
+          <!-- main start -->
+          <!-- ================ -->
+          <div class="main col-12">
+
+            <!-- page-title start -->
+            <!-- ================ -->
+            <h1 class="page-title text-center"><%= @item.title %></h1>
+            <div class="separator with-icon"><i class="fa fa-shopping-bag bordered"></i></div>
+            <!-- page-title end -->
+
+            <div class="row">
+              <div class="col-lg-4 col-xl-5">
+                <!-- pills start -->
+                <!-- ================ -->
+                <!-- Nav tabs -->
+                <ul class="nav nav-pills">
+                  <li class="nav-item"><a class="nav-link active" href="#pill-1" data-toggle="tab" title="images"><i class="fa fa-camera pr-1"></i> Photo</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content clear-style">
+                  <div class="tab-pane active" id="pill-1">
+                    <div class="slick-carousel content-slider-with-thumbs mb-20">
+												<%= image_tag "items/#{@item.image_url}" %>
+                    </div>
+                   </div>
+                </div>
+                <!-- pills end -->
+                <hr class="mb-10">
+              </div>
+              <div class="col-lg-8 col-xl-7 pv-30">
+                <h2 class="mt-4">Description</h2>
+                <p><%= @item.description %></p>
+                
+                <span class="product price"><i class="fa fa-tag pr-10"></i><s class="small text-muted">$120.00</s> $<%= @item.price %></span>
+                <div class="product elements-list pull-right clearfix">
+
+                <% if user_signed_in? %>
+
+                    <a href="/add-item-to-cart/<%= @item.id %>" class="margin-clear btn btn-default" data-remote="true">
+                      Add To Cart
+                    </a>
+
+                <% else %>
+                    <a href="/users/sign_in" class="margin-clear btn btn-default">
+                      Add To Cart
+                    </a>
+                <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- main end -->
+
+        </div>
+      </div>
+    </section>
