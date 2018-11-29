@@ -12,7 +12,8 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @items = Item.create
+    @item = Item.create
+    @item.image_url.attach(params[:image_url])
   end
 
   def edit
@@ -20,6 +21,8 @@ class ItemsController < ApplicationController
   end
 
   def update
-    @item = Item.update.attach(params[:image_url])
+    @item = Item.find(params[:id])
+    @item.image_url.attach(params[:image_url])
+    redirect_to @item.id
   end
 end
