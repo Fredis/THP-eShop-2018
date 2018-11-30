@@ -13,3 +13,6 @@ i = 1
 	items = Item.create(title: "Pic n°#{i}: " + Faker::Pokemon.name, description:Faker::MostInterestingManInTheWorld.quote, price:Faker::Number.decimal(2, 2), image_url:"cats-#{i}.jpeg")
 	i += 1
 end
+
+Smartphone.create(title: "Xiaomi", description: "Xiaomi, c'est de la bombe baby!")
+Smartphone.create(title: "Huawei", description: "Huawei, c'est de la bombe baobay!")
