@@ -6,6 +6,9 @@ E-Shop for Thp project Session 6 2018 <br>
 [URL](https://pic-your-cat-prod.herokuapp.com/) ( Production link heroku)
 https://pic-your-cat-prod.herokuapp.com/
 
+[URL](https://pic-your-cat-dev.herokuapp.com/) ( Development link heroku)
+https://pic-your-cat-dev.herokuapp.com/
+
 
 ## Team  Members
 
