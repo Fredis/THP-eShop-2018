@@ -1,21 +1,22 @@
 	 Yo,
-	Bonne nouvelle, l'utilisateur <%=current_user.id %> a claqué ses bouzoufs pour acheter des photos de chats t'as vu !
+	Bonne nouvelle, l'utilisateur <%=@user.id%> a claqué ses bouzoufs pour acheter des photos de chats t'as vu !
 	Voici le récapitulatif de sa commande
-	Commande numéro <%=order.id%>
-	 <% if items_to_mail.size == 1 %>
-		<%= items_to_email[0].title %>
-		Url de l'image <%=items_to_email[0].url_image%>
-		Total de la commande <%=items_to_email[0].price %> 
+	Commande numéro <%=@order.id%>
+	 <% if @order.items.size == 1 %>
+		<%= @order.items[0].title %>
+		Url de l'image <%=@order.items[0].url_image%>
+		Total de la commande <%=@order_item[0].price %> 
 		Miaou ! 😽 
 
 
 	<% else %>
-		<% items_to_email.each do |i| %>
-			<%= i[i.id].title %>
-			<%= i[i.id].image_url %>
-			<%= i[i.id].price %>
+		<% @order.items.each do |o| %>
+			<%= o.title %>
+			<%= o.image_url %>
+			<%= o.price %>
 		<% end %>
-		Total de la commande <%=items_to_email.sum(:price)%>
+		Total de la commande <%=@order.items.sum(:price)%>
 		Miaou ! 😽 
 	<%end%>
+
 

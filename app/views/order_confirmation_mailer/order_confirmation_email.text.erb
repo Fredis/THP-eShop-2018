@@ -1,23 +1,22 @@
 	Bonjour,
 	Merci pour votre commande sur Pic'your Cat. En voici le récapitulatif
-	Numéro de commande <%=order.id%>
-	<% if items_to_email.size == 1 %> 
-		<%= items_to_email[0].title %>
+	Numéro de commande <%=@order.id%>
+	<% if @order.items.size == 1 %> 
+		<%= @order.items[0].title %>
 		Voici votre image 
-		<%= image_tag 'cats-<%=items_to_email[0].id%>.jpeg'%>
-		Vous pouvez également récupérer votre image via le lien <%= items_to_email[0].image_url %>
-		Voici le total de la commande <%=items_to_email[0].price %>
+		Vous pouvez également récupérer votre image via le lien <%= @order.items.first.image_url %>
+		Voici le total de la commande <%=@order.items.first.price %>
 		A très bientôt
 		Miaou ! 😽
 
 	<% else %>
-		<% items_to_email.each do |i| %>
-			<%= i[i.id].title %>
-			<%= image_tage 'cats-<%=i[i.id].id%>.jpeg'%>
-			Vous pouvez aussi récupérer l'image via l'url <%= i[i.id].image_url %>
+		<% @order.items.each do |o| %>
+			<%= o.title %>
+			Lien vers l'image <%= o.image_url %>
 		<% end %>
-		Total de la commande <%=items_to_email.sum(:price)%>
+		Total de la commande <%=@order.items.sum(:price)%>
 		A très bientôt
 		Miaou ! 😽
 
 	<%end%>
+

@@ -12,7 +12,7 @@ class OrdersController < ApplicationController
 	end
 
 	def payment_history
-		puts "hahahahahaha"
+		
 		@orders = User.find(current_user.id).orders
 	end
 
@@ -21,22 +21,23 @@ class OrdersController < ApplicationController
 		@items = @cart.items
 		@order = Order.create(user_id: current_user.id, status: "Payment done.")
 		
-		puts "yooooooooo"
+		#puts "yooooooooo"
 		puts @order.errors.messages
 		@items.each do |element|
 			@order.items << element
 		end
 
-		#set variables to use mailers 
-		items_to_email = @order.items
-		order_id = @order.id
+		#set @user to pass current_user.id in mailers
+		@user = current_user
 
+		puts '//////////////////////'
+		puts @order.id
 
 		#send a confirmation email to customer
-		OrderConfirmationMailer.order_confirmation_email(order.id, current_user.id, items_to_email)
+		OrderConfirmationMailer.with(order: @order, user: @user).order_confirmation_email.deliver_now
 
 		#send a confirmation email to admin 
-		OrderConfirmationMailer.admin_confirmation_email(order.id, current_user.id, items_to_email)
+		OrderConfirmationMailer.with(order: @order, user: @user).admin_confirmation_email.deliver_now
 
 
 		@items.destroy
