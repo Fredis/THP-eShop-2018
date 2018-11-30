@@ -29,7 +29,7 @@
 	        <% @items.each do |item| %>
 	        <tbody>
 	          <tr class="remove-data">
-	            <td class="product"><a href="shop-product.html"><%= item.title %></a> <small><%= item.description%></small></td>
+	            <td class="product"><%= item.title %><small><%= item.description%></small></td>
 	            <td class="price">$<%= item.price%></td>
 	            <td class="quantity">
 	              <div class="form-group">
